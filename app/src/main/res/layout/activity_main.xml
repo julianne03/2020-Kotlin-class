@@ -9,14 +9,14 @@
 
     <ImageView
         android:id="@+id/profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="269dp"
+        android:layout_height="268dp"
         android:layout_marginTop="28dp"
+        android:contentDescription="@string/my_profile_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars"
-        android:contentDescription="@string/my_profile_image" />
+        tools:srcCompat="@drawable/youth" />
 
     <Button
         android:id="@+id/btn1"
