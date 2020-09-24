@@ -26,6 +26,9 @@ public class Fourbutton2Activity extends AppCompatActivity implements View.OnCli
         mButton4 = findViewById(R.id.button4);
 
         mButton1.setOnClickListener(this);
+        mButton2.setOnClickListener(this);
+        mButton3.setOnClickListener(this);
+        mButton4.setOnClickListener(this);
 
     }
 

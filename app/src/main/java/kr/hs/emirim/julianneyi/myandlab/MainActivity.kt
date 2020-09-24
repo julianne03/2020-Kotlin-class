@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         mButton2.setOnClickListener {
-            val intient = Intent(this, Fourbutton2Activity::class.java)
+            val intent = Intent(this, Fourbutton2Activity::class.java)
             startActivity(intent)
         }
 
