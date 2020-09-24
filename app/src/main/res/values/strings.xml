@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyAndLab</string>
+    <string name="four_button_p_103">Four Button(p.103)</string>
+    <string name="four_button_linearlayout">Four Button LinearLayout</string>
+    <string name="my_profile_image">My Profile Image</string>
+    <string name="go_school">학교 홈페이지 열기</string>
+    <string name="go_call">긴급 전화 걸기</string>
+    <string name="open_photo">갤러리 열기</string>
+    <string name="back">돌아가기</string>
+</resources>
