@@ -7,4 +7,10 @@
     <string name="go_call">긴급 전화 걸기</string>
     <string name="open_photo">갤러리 열기</string>
     <string name="back">돌아가기</string>
+    <string name="userText">Name</string>
+    <string name="showText">글자 나타내기</string>
+    <string name="showHp">홈페이지 열기</string>
+    <string name="oreo">오레오</string>
+    <string name="pi">파이</string>
+    <string name="p_112_number_7">p.112 number 7</string>
 </resources>

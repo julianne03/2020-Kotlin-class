@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var mProfile : ImageView
     lateinit var mButton1: Button
     lateinit var mButton2: Button
+    lateinit var mButton3: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         mProfile = findViewById(R.id.profile)
         mButton1 = findViewById(R.id.btn1)
         mButton2 = findViewById(R.id.btn2)
+        mButton3 = findViewById(R.id.p112number7)
 
         mButton1.setOnClickListener {
             val intent = Intent(this, FourbuttonActivity::class.java)
@@ -30,7 +32,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
-
+        mButton3.setOnClickListener {
+            val intent = Intent(this, SettingImageActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
