@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import kr.hs.emirim.julianneyi.myandlab.chap04widget.CalActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,6 +36,10 @@ class MainActivity : AppCompatActivity() {
         mButton3.setOnClickListener {
             val intent = Intent(this, SettingImageActivity::class.java)
             startActivity(intent)
+        }
+
+        findViewById<Button>(R.id.btn4).setOnClickListener {
+            startActivity(Intent(this, CalActivity::class.java));
         }
     }
 }
