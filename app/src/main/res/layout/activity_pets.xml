@@ -35,6 +35,7 @@
         android:text="좋아하는 애완동물은?"
         android:textColor="#000000"
         android:textSize="24sp"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cb_start" />
 
@@ -46,6 +47,7 @@
         android:text="선택 완료"
         android:textColor="#000000"
         android:textSize="24sp"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup4" />
 
@@ -54,6 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
@@ -81,4 +84,14 @@
             android:textColor="#000000"
             android:textSize="24sp" />
     </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="229dp"
+        android:layout_height="249dp"
+        android:layout_marginTop="32dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_select" />
 </androidx.constraintlayout.widget.ConstraintLayout>
