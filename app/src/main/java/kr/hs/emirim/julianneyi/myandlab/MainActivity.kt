@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.ImageView
 import kr.hs.emirim.julianneyi.myandlab.chap04widget.BasicWidgetActivity
 import kr.hs.emirim.julianneyi.myandlab.chap04widget.CalActivity
+import kr.hs.emirim.julianneyi.myandlab.chap04widget.PetsActivity
 
 class MainActivity : AppCompatActivity(),View.OnClickListener {
 
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         findViewById<Button>(R.id.btn3).setOnClickListener(this)
         findViewById<Button>(R.id.btn4).setOnClickListener(this)
         findViewById<Button>(R.id.btn5).setOnClickListener(this)
+        findViewById<Button>(R.id.btn6).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -30,6 +32,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             R.id.btn3 -> intent = Intent(this, SettingImageActivity::class.java)
             R.id.btn4 -> intent = Intent(this, CalActivity::class.java)
             R.id.btn5 -> intent = Intent(this, BasicWidgetActivity::class.java)
+            R.id.btn6 -> intent = Intent(this, PetsActivity::class.java)
             else -> return
         }
 
