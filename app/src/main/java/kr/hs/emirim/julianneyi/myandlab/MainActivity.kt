@@ -9,6 +9,7 @@ import android.widget.ImageView
 import kr.hs.emirim.julianneyi.myandlab.chap04widget.BasicWidgetActivity
 import kr.hs.emirim.julianneyi.myandlab.chap04widget.CalActivity
 import kr.hs.emirim.julianneyi.myandlab.chap04widget.PetsActivity
+import kr.hs.emirim.julianneyi.myandlab.chap04widget.RotateImageActivity
 
 class MainActivity : AppCompatActivity(),View.OnClickListener {
 
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         findViewById<Button>(R.id.btn4).setOnClickListener(this)
         findViewById<Button>(R.id.btn5).setOnClickListener(this)
         findViewById<Button>(R.id.btn6).setOnClickListener(this)
+        findViewById<Button>(R.id.btn7).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -33,6 +35,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             R.id.btn4 -> intent = Intent(this, CalActivity::class.java)
             R.id.btn5 -> intent = Intent(this, BasicWidgetActivity::class.java)
             R.id.btn6 -> intent = Intent(this, PetsActivity::class.java)
+            R.id.btn7 -> intent = Intent(this, RotateImageActivity::class.java)
             else -> return
         }
 
