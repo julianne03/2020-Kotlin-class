@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import kr.hs.emirim.julianneyi.myandlab.ch05layout.NoXmlActivity
+import kr.hs.emirim.julianneyi.myandlab.ch06advwidget.DateTimeBookActivity
 import kr.hs.emirim.julianneyi.myandlab.chap04widget.BasicWidgetActivity
 import kr.hs.emirim.julianneyi.myandlab.chap04widget.CalActivity
 import kr.hs.emirim.julianneyi.myandlab.chap04widget.PetsActivity
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         findViewById<Button>(R.id.btn6).setOnClickListener(this)
         findViewById<Button>(R.id.btn7).setOnClickListener(this)
         findViewById<Button>(R.id.btn8).setOnClickListener(this)
+        findViewById<Button>(R.id.btn9).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -39,6 +41,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             R.id.btn6 -> intent = Intent(this, PetsActivity::class.java)
             R.id.btn7 -> intent = Intent(this, RotateImageActivity::class.java)
             R.id.btn8 -> intent = Intent(this, NoXmlActivity::class.java)
+            R.id.btn9 -> intent = Intent(this, DateTimeBookActivity::class.java)
             else -> return
         }
 
