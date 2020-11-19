@@ -18,6 +18,7 @@ class TabFragmentActivity : AppCompatActivity(), ActionBar.TabListener {
     lateinit var tabSong : ActionBar.Tab
     lateinit var tabArtist : ActionBar.Tab
     lateinit var tabAlbum : ActionBar.Tab
+    var myFrags = arrayOfNulls<MyTabFragment>(3)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,10 +42,24 @@ class TabFragmentActivity : AppCompatActivity(), ActionBar.TabListener {
         tabAlbum.setTabListener(this)
         bar.addTab(tabAlbum)
 
+
+
     }
 
-    override fun onTabSelected(tab: ActionBar.Tab?, ft: FragmentTransaction?) {
-        TODO("Not yet implemented")
+    override fun onTabSelected(tab: ActionBar.Tab, ft: FragmentTransaction) {
+        var myTabFrag : MyTabFragment? = null
+
+        if(myFrags[tab.position] == null) {
+            myTabFrag = MyTabFragment()
+            val data = Bundle()
+            data.putString("tabName",tab.text.toString())
+            myTabFrag.arguments = data
+            myFrags[tab.position] = myTabFrag
+        } else {
+            myTabFrag = myFrags[tab.position]
+        }
+
+        ft.replace(android.R.id.content,myTabFrag!!)
     }
 
     override fun onTabUnselected(tab: ActionBar.Tab?, ft: FragmentTransaction?) {
@@ -55,7 +70,7 @@ class TabFragmentActivity : AppCompatActivity(), ActionBar.TabListener {
         TODO("Not yet implemented")
     }
 
-    class MyTabFragment : Fragment() {
+    class MyTabFragment : androidx.fragment.app.Fragment() {
         var tabName : String? = null
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -65,7 +80,7 @@ class TabFragmentActivity : AppCompatActivity(), ActionBar.TabListener {
         }
 
         override fun onCreateView(
-            inflater: LayoutInflater?,
+            inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
         ): View? {
@@ -82,7 +97,6 @@ class TabFragmentActivity : AppCompatActivity(), ActionBar.TabListener {
             }
             return baseLayout
 
-            return super.onCreateView(inflater, container, savedInstanceState)
         }
     }
 }
