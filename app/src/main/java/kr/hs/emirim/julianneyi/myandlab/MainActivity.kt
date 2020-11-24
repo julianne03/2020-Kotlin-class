@@ -7,10 +7,8 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import kr.hs.emirim.julianneyi.myandlab.ch05layout.NoXmlActivity
-import kr.hs.emirim.julianneyi.myandlab.ch06advwidget.DateTimeBookActivity
-import kr.hs.emirim.julianneyi.myandlab.ch06advwidget.TabWidgetActivity
-import kr.hs.emirim.julianneyi.myandlab.ch06advwidget.ViewFilpperActivity
-import kr.hs.emirim.julianneyi.myandlab.ch06advwidget.WebViewActivity
+import kr.hs.emirim.julianneyi.myandlab.ch06advwidget.*
+import kr.hs.emirim.julianneyi.myandlab.ch07menu.OptionMenuActvity
 import kr.hs.emirim.julianneyi.myandlab.chap04widget.BasicWidgetActivity
 import kr.hs.emirim.julianneyi.myandlab.chap04widget.CalActivity
 import kr.hs.emirim.julianneyi.myandlab.chap04widget.PetsActivity
@@ -34,6 +32,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         findViewById<Button>(R.id.btn10).setOnClickListener(this)
         findViewById<Button>(R.id.btn11).setOnClickListener(this)
         findViewById<Button>(R.id.btn12).setOnClickListener(this)
+        findViewById<Button>(R.id.btn13).setOnClickListener(this)
+        findViewById<Button>(R.id.btn14).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -50,7 +50,9 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             R.id.btn9 -> intent = Intent(this, DateTimeBookActivity::class.java)
             R.id.btn10 -> intent = Intent(this,ViewFilpperActivity::class.java)
             R.id.btn11 -> intent = Intent(this,TabWidgetActivity::class.java)
-            R.id.btn12 -> intent = Intent(this,WebViewActivity::class.java)
+            R.id.btn12 -> intent = Intent(this,TabFragmentActivity::class.java)
+            R.id.btn13 -> intent = Intent(this,WebViewActivity::class.java)
+            R.id.btn14 -> intent = Intent(this,OptionMenuActvity::class.java)
             else -> return
         }
 
