@@ -9,6 +9,7 @@ import android.widget.ImageView
 import kr.hs.emirim.julianneyi.myandlab.ch05layout.NoXmlActivity
 import kr.hs.emirim.julianneyi.myandlab.ch06advwidget.*
 import kr.hs.emirim.julianneyi.myandlab.ch07menu.OptionMenuActvity
+import kr.hs.emirim.julianneyi.myandlab.ch07menu.SnackbarActivity
 import kr.hs.emirim.julianneyi.myandlab.chap04widget.BasicWidgetActivity
 import kr.hs.emirim.julianneyi.myandlab.chap04widget.CalActivity
 import kr.hs.emirim.julianneyi.myandlab.chap04widget.PetsActivity
@@ -34,6 +35,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         findViewById<Button>(R.id.btn12).setOnClickListener(this)
         findViewById<Button>(R.id.btn13).setOnClickListener(this)
         findViewById<Button>(R.id.btn14).setOnClickListener(this)
+        findViewById<Button>(R.id.btn15).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -53,6 +55,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             R.id.btn12 -> intent = Intent(this,TabFragmentActivity::class.java)
             R.id.btn13 -> intent = Intent(this,WebViewActivity::class.java)
             R.id.btn14 -> intent = Intent(this,OptionMenuActvity::class.java)
+            R.id.btn15 -> intent = Intent(this,SnackbarActivity::class.java)
             else -> return
         }
 
