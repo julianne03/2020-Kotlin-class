@@ -11,7 +11,9 @@ import kr.hs.emirim.julianneyi.myandlab.ch06advwidget.*
 import kr.hs.emirim.julianneyi.myandlab.ch07menu.MyWidgetActivity
 import kr.hs.emirim.julianneyi.myandlab.ch07menu.OptionMenuActvity
 import kr.hs.emirim.julianneyi.myandlab.ch07menu.SnackbarActivity
+import kr.hs.emirim.julianneyi.myandlab.ch08io.ReadWriteActivity
 import kr.hs.emirim.julianneyi.myandlab.ch09canvas.CanvasActivity
+import kr.hs.emirim.julianneyi.myandlab.ch09canvas.PainterActivity
 import kr.hs.emirim.julianneyi.myandlab.chap04widget.BasicWidgetActivity
 import kr.hs.emirim.julianneyi.myandlab.chap04widget.CalActivity
 import kr.hs.emirim.julianneyi.myandlab.chap04widget.PetsActivity
@@ -40,6 +42,8 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         findViewById<Button>(R.id.btn15).setOnClickListener(this)
         findViewById<Button>(R.id.btn16).setOnClickListener(this)
         findViewById<Button>(R.id.btn17).setOnClickListener(this)
+        findViewById<Button>(R.id.btn18).setOnClickListener(this)
+        findViewById<Button>(R.id.btn19).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -61,7 +65,9 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
             R.id.btn14 -> intent = Intent(this,OptionMenuActvity::class.java)
             R.id.btn15 -> intent = Intent(this,SnackbarActivity::class.java)
             R.id.btn16 -> intent = Intent(this,MyWidgetActivity::class.java)
-            R.id.btn17 -> intent = Intent(this,CanvasActivity::class.java)
+            R.id.btn17 -> intent = Intent(this,ReadWriteActivity::class.java)
+            R.id.btn18 -> intent = Intent(this,CanvasActivity::class.java)
+            R.id.btn19 -> intent = Intent(this,PainterActivity::class.java)
             else -> return
         }
 
