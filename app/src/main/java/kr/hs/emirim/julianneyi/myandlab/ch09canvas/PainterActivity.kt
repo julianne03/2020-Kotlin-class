@@ -1,6 +1,7 @@
 package kr.hs.emirim.julianneyi.myandlab.ch09canvas
 
 import android.content.Context
+import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
@@ -57,6 +58,11 @@ class PainterActivity : AppCompatActivity() {
                 Toast.makeText(this,"원 그리기 모드",Toast.LENGTH_SHORT).show()
                 return true
             }
+            RECTANGLE -> {
+                curShape = RECTANGLE
+                Toast.makeText(this,"네모 그리기 모드",Toast.LENGTH_SHORT).show()
+                return true
+            }
             COLOR_RED -> {
                 curColor = Color.RED
                 contentView.invalidate()
@@ -102,6 +108,24 @@ class PainterActivity : AppCompatActivity() {
 
         override fun onDraw(canvas: Canvas) {
             super.onDraw(canvas)
+
+            var picture = BitmapFactory.decodeResource(resources,R.drawable.pie)
+
+            var cenX = this.width / 2f
+            var cenY = this.height / 2f
+
+            var picX = (this.width - picture.width).toFloat() / 2
+            var picY = (this.height - picture.height) / 2f
+
+
+            canvas.rotate(-45f, cenX, cenY)
+            canvas.drawBitmap(picture, picX, picY, null)
+            canvas.rotate(45f, cenX, cenY)
+
+
+            //canvas.translate(-150f,200f)
+            //canvas.drawBitmap(picture, picX, picY, null)
+            picture.recycle()
 
             val curPaint = Paint()
             curPaint.isAntiAlias = true
